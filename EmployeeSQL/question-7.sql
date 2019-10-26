@@ -3,3 +3,4 @@ FROM employees
 JOIN department_employee ON department_employee.emp_no = employees.emp_no
 JOIN departments ON departments.dept_no = department_employee.dept_no
 WHERE dept_name = 'Sales' OR dept_name = 'Development'
+ORDER BY employees.emp_no
