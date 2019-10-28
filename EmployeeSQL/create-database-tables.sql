@@ -17,15 +17,15 @@ COMMENT ON DATABASE "sql-challenge"
 CREATE TABLE "department_employee" (
    "emp_no" INT   NOT NULL,
    "dept_no" VARCHAR(15)   NOT NULL,
-   "from_date" VARCHAR(20)   NOT NULL,
-   "to_date" VARCHAR(20)   NOT NULL
+   "from_date" DATE   NOT NULL,
+   "to_date" DATE   NOT NULL
 );
 
 CREATE TABLE "department_manager" (
     "dept_no" VARCHAR(15)   NOT NULL,
     "emp_no" INT   NOT NULL,
-    "from_date" VARCHAR(20)   NOT NULL,
-    "to_date" VARCHAR(20)   NOT NULL
+    "from_date" DATE   NOT NULL,
+    "to_date" DATE   NOT NULL
 );
 
 CREATE TABLE "departments" (
@@ -41,11 +41,11 @@ CREATE TABLE "departments" (
 
 CREATE TABLE "employees" (
     "emp_no" INT   NOT NULL,
-    "birth_date" VARCHAR(20)   NOT NULL,
+    "birth_date" DATE   NOT NULL,
     "first_name" VARCHAR(100)   NOT NULL,
     "last_name" VARCHAR(100)   NOT NULL,
     "gender" VARCHAR(10)   NOT NULL,
-    "hire_date" VARCHAR(20)   NOT NULL,
+    "hire_date" DATE   NOT NULL,
     CONSTRAINT "pk_Employees" PRIMARY KEY (
         "emp_no"
      )
@@ -54,15 +54,15 @@ CREATE TABLE "employees" (
 CREATE TABLE "titles" (
     "emp_no" INT   NOT NULL,
     "title" VARCHAR(100)   NOT NULL,
-    "from_date" VARCHAR(20)   NOT NULL,
-    "to_date" VARCHAR(20)   NOT NULL
+    "from_date" DATE   NOT NULL,
+    "to_date" DATE   NOT NULL
 );
 
 CREATE TABLE "salaries" (
     "emp_no" INT   NOT NULL,
     "salary" float(2)   NOT NULL,
-    "from_date" VARCHAR(20)   NOT NULL,
-    "to_date" VARCHAR(20)   NOT NULL
+    "from_date" DATE   NOT NULL,
+    "to_date" DATE   NOT NULL
 );
 
 CREATE INDEX "idx_titles_emp_no"

@@ -1,0 +1,41 @@
+department_employee as de
+------------
+emp_no INT FK -< employees.emp_no
+dept_no VARCHAR(15) FK -< departments.dept_no
+from_date DATE
+to_date DATE
+
+department_manager as de
+------------
+dept_no VARCHAR(15) FK -< departments.dept_no
+emp_no INT FK -< employees.emp_no
+from_date DATE
+to_date DATE
+
+departments as d 
+------------
+dept_no PK VARCHAR(15)
+dept_name VARCHAR(100) UNIQUE
+
+employees as e
+------------
+emp_no PK INT
+birth_date DATE
+first_name VARCHAR(100)
+last_name VARCHAR(100)
+gender VARCHAR(10)
+hire_date DATE
+
+titles as t
+------------
+emp_no INDEX INT FK -< employees.emp_no
+title VARCHAR(100)
+from_date DATE
+to_date DATE
+
+salaries as s
+------------
+emp_no INDEX INT FK - employees.emp_no
+salary float(2)
+from_date DATE
+to_date DATE
