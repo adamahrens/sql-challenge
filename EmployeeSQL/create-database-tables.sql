@@ -3,7 +3,7 @@
 -- DROP DATABASE "sql-challenge";
 
 CREATE DATABASE "sql-challenge"
-    WITH 
+    WITH
     OWNER = adamahrens
     ENCODING = 'UTF8'
     LC_COLLATE = 'C'
@@ -13,7 +13,7 @@ CREATE DATABASE "sql-challenge"
 
 COMMENT ON DATABASE "sql-challenge"
     IS 'SQL Challenge for U of M Bootcamp';
-	
+
 CREATE TABLE "department_employee" (
    "emp_no" INT   NOT NULL,
    "dept_no" VARCHAR(15)   NOT NULL,
@@ -60,7 +60,7 @@ CREATE TABLE "titles" (
 
 CREATE TABLE "salaries" (
     "emp_no" INT   NOT NULL,
-    "salary" float(2)   NOT NULL,
+    "salary" INT   NOT NULL,
     "from_date" DATE   NOT NULL,
     "to_date" DATE   NOT NULL
 );
